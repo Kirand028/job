@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Job</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="first-row-container">
+            <div class="header">
+                <a href=""><i class='bx bx-arrow-back' ></i></a>
+                <h3>Search</h3>
+                <i></i>
+            </div>
+            <div class="search-bar-container">
+                <div class="search-inputs-container">
+                    <div class="search-inputs">
+                        <input type="text" placeholder="search job by name, company, skill">
+                        <i class='bx bx-search'></i>
+                    </div>
+                    <button onclick="showFilterBox();"><i class='bx bx-filter-alt'></i></button>
+                </div>
+            </div>
+            <form action="#" class="filter-container">
+                
+                <div class="filter-input-container">
+                    <label for="remote">Remote</label>
+                    <select name="remote" id="remote">
+                        <option value="On-Site">On-Site</option>
+                        <option value="Hybrid">Hybrid</option>
+                        <option value="Remote">Remote</option>
+                    </select>
+                </div>
+
+                <div class="filter-input-container">
+                    <label for="domain">Domain </label>
+                    <select name="domain"  id="domain">
+                        <option value="All">All</option>
+                        <option value="Design">Design</option>
+                        <option value="Design">Software Engineer</option>
+                        <option value="Design">Data Science</option>
+                        <option value="Design">IT</option>
+                        <option value="Design">Network</option>
+                        <option value="Design">Customer Service</option>
+                    </select>
+                </div>
+                
+                <div class="filter-input-container">
+                    <label for="domain">Job Type</label>
+                    <select name="job-type" id="job-type">
+                        <option value="All">All</option>
+                        <option value="Full Time">Full Time</option>
+                        <option value="Part Time">Part Time</option>
+                        <option value="Intern">Intern</option>
+                    </select>
+                </div>
+                
+                <div class="filter-input-container">
+                    <span>click to filter</span>
+                    <button>Filter</button>
+                </div>
+
+            </form>
+            <div class="searched-job-list">
+                <div class="search-result-header">
+                    <h4>Search Result</h4>
+                    <span>144 Jobs Found</span>
+                </div>
+                <div class="search-result-list">
+                    <div class="search-job-details">
+                        <div class="company-logo"></div>
+                        <div class="job-title-loc">
+                            <span>Design</span>
+                            <h4>Software Engineer</h4>
+                            <span class="target-location"><i class='bx bx-current-location' ></i> Bangaore, India</span>
+                        </div>
+                        <div class="price-apply-btn">
+                            <span>$14k-$15k</span>
+                            <a href="#">Apply <i class='bx bx-chevrons-right'></i></a>
+                        </div>
+                    </div>
+                    <div class="search-job-details">
+                        <div class="company-logo"></div>
+                        <div class="job-title-loc">
+                            <span>Design</span>
+                            <h4>Software Engineer</h4>
+                            <span class="target-location"><i class='bx bx-current-location' ></i> Bangaore, India</span>
+                        </div>
+                        <div class="price-apply-btn">
+                            <span>$14k-$15k</span>
+                            <a href="#">Apply <i class='bx bx-chevrons-right'></i></a>
+                        </div>
+                    </div>
+                    <div class="search-job-details">
+                        <div class="company-logo"></div>
+                        <div class="job-title-loc">
+                            <span>Design</span>
+                            <h4>Software Engineer</h4>
+                            <span class="target-location"><i class='bx bx-current-location' ></i> Bangaore, India</span>
+                        </div>
+                        <div class="price-apply-btn">
+                            <span>$14k-$15k</span>
+                            <a href="#">Apply <i class='bx bx-chevrons-right'></i></a>
+                        </div>
+                    </div>
+                    <div class="search-job-details">
+                        <div class="company-logo"></div>
+                        <div class="job-title-loc">
+                            <span>Design</span>
+                            <h4>Software Engineer</h4>
+                            <span class="target-location"><i class='bx bx-current-location' ></i> Bangaore, India</span>
+                        </div>
+                        <div class="price-apply-btn">
+                            <span>$14k-$15k</span>
+                            <a href="#">Apply <i class='bx bx-chevrons-right'></i></a>
+                        </div>
+                    </div>
+                    <div class="search-job-details">
+                        <div class="company-logo"></div>
+                        <div class="job-title-loc">
+                            <span>Design</span>
+                            <h4>Software Engineer</h4>
+                            <span class="target-location"><i class='bx bx-current-location' ></i> Bangaore, India</span>
+                        </div>
+                        <div class="price-apply-btn">
+                            <span>$14k-$15k</span>
+                            <a href="#">Apply <i class='bx bx-chevrons-right'></i></a>
+                        </div>
+                    </div>
+                    <div class="search-job-details">
+                        <div class="company-logo"></div>
+                        <div class="job-title-loc">
+                            <span>Design</span>
+                            <h4>Software Engineer</h4>
+                            <span class="target-location"><i class='bx bx-current-location' ></i> Bangaore, India</span>
+                        </div>
+                        <div class="price-apply-btn">
+                            <span>$14k-$15k</span>
+                            <a href="#">Apply <i class='bx bx-chevrons-right'></i></a>
+                        </div>
+                    </div>
+                    <div class="search-job-details">
+                        <div class="company-logo"></div>
+                        <div class="job-title-loc">
+                            <span>Design</span>
+                            <h4>Software Engineer</h4>
+                            <span class="target-location"><i class='bx bx-current-location' ></i> Bangaore, India</span>
+                        </div>
+                        <div class="price-apply-btn">
+                            <span>$14k-$15k</span>
+                            <a href="#">Apply <i class='bx bx-chevrons-right'></i></a>
+                        </div>
+                    </div>
+                    <div class="search-job-details">
+                        <div class="company-logo"></div>
+                        <div class="job-title-loc">
+                            <span>Design</span>
+                            <h4>Software Engineer</h4>
+                            <span class="target-location"><i class='bx bx-current-location' ></i> Bangaore, India</span>
+                        </div>
+                        <div class="price-apply-btn">
+                            <span>$14k-$15k</span>
+                            <a href="#">Apply <i class='bx bx-chevrons-right'></i></a>
+                        </div>
+                    </div>
+                    <div class="search-job-details">
+                        <div class="company-logo"></div>
+                        <div class="job-title-loc">
+                            <span>Design</span>
+                            <h4>Software Engineer</h4>
+                            <span class="target-location"><i class='bx bx-current-location' ></i> Bangaore, India</span>
+                        </div>
+                        <div class="price-apply-btn">
+                            <span>$14k-$15k</span>
+                            <a href="#">Apply <i class='bx bx-chevrons-right'></i></a>
+                        </div>
+                    </div>
+                    <div class="search-job-details">
+                        <div class="company-logo"></div>
+                        <div class="job-title-loc">
+                            <span>Design</span>
+                            <h4>Software Engineer</h4>
+                            <span class="target-location"><i class='bx bx-current-location' ></i> Bangaore, India</span>
+                        </div>
+                        <div class="price-apply-btn">
+                            <span>$14k-$15k</span>
+                            <a href="#">Apply <i class='bx bx-chevrons-right'></i></a>
+                        </div>
+                    </div>
+                    <div class="search-job-details">
+                        <div class="company-logo"></div>
+                        <div class="job-title-loc">
+                            <span>Design</span>
+                            <h4>Software Engineer</h4>
+                            <span class="target-location"><i class='bx bx-current-location' ></i> Bangaore, India</span>
+                        </div>
+                        <div class="price-apply-btn">
+                            <span>$14k-$15k</span>
+                            <a href="#">Apply <i class='bx bx-chevrons-right'></i></a>
+                        </div>
+                    </div>
+                    <div class="search-job-details">
+                        <div class="company-logo"></div>
+                        <div class="job-title-loc">
+                            <span>Design</span>
+                            <h4>Software Engineer</h4>
+                            <span class="target-location"><i class='bx bx-current-location' ></i> Bangaore, India</span>
+                        </div>
+                        <div class="price-apply-btn">
+                            <span>$14k-$15k</span>
+                            <a href="#">Apply <i class='bx bx-chevrons-right'></i></a>
+                        </div>
+                    </div>
+                    <div class="search-job-details">
+                        <div class="company-logo"></div>
+                        <div class="job-title-loc">
+                            <span>Design</span>
+                            <h4>Software Engineer</h4>
+                            <span class="target-location"><i class='bx bx-current-location' ></i> Bangaore, India</span>
+                        </div>
+                        <div class="price-apply-btn">
+                            <span>$14k-$15k</span>
+                            <a href="#">Apply <i class='bx bx-chevrons-right'></i></a>
+                        </div>
+                    </div>
+                    <small></small>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="home.html"><i class='bx bx-home-alt-2'></i></a>
+            <a href="#"><i class='bx bxs-search'></i></a>
+            <a href="#"><i class='bx bx-cog'></i></a>
+            <a href="#"><i class='bx bx-user'></i></a>
+        </div>
+    </div>
+    <script>
+        var filterContainer = document.querySelector(".filter-container");
+        filterContainer.style.display = "none";
+        function showFilterBox() {
+            (filterContainer.style.display == "flex") ? filterContainer.style.display = "none": filterContainer.style.display = "flex";
+        }
+    </script>
+</body>
+</html>

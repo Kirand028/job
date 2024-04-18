@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Details</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="job.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="first-row-container">
+            <div class="header">
+                <a href="home.html"><i class='bx bx-arrow-back' ></i></a>
+                <h3>Job Details</h3>
+                <i></i>
+            </div>
+            <div class="body-container">
+                <div class="first-half-body">
+                    <div class="company-details">
+                        <div class="logo"></div>
+                        <span class="company-title">Nike</span>
+                    </div>
+                    <div class="role-details">
+                        <h3 class="role-title">Senior UI Designer</h3>
+                        <span class="salary-range">$20K-$45K</span>
+                    </div>
+                    <div class="role-other-details">
+                        <span>Full Time</span>
+                        <span>2-5 years</span>
+                        <span>India</span>
+                    </div>
+                    <div class="role-details-btn">
+                        <button class="d-btn active">Description</button>
+                        <button class="r-btn">About Company</button>
+                    </div>
+                </div>
+                <div class="second-half-body">
+                    <div class="about-job">
+                        <h4>Job Description</h4>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt eos nam iusto exercitationem quaerat? Ex animi cupiditate asperiores ratione, ad minus, quidem quisquam laborum debitis unde dignissimos et nemo eos?
+                    </div>
+                    <div class="about-job responsibility">
+                        <h4>Responsibilty and Qualification</h4>
+                        <ul>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, ex voluptate! Atque accusantium amet</li>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, ex voluptate! Atque accusantium amet</li>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, ex voluptate! Atque accusantium amet</li>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, ex voluptate! Atque accusantium amet</li>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae</li>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, ex voluptate! Atque accusantium amet</li>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, ex voluptate! Atque accusantium amet</li>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-company-details">
+                    <h4>About the Company</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus, officiis quibusdam minus omnis, at aliquam harum pariatur voluptatum magni esse deserunt officia eius ut. Nihil est repellendus nesciunt nostrum voluptatibus!</p>
+                    <p>Total Employees :<span> 1000+</span></p>
+                    <p>Head Quarter :<span> Udupi, India</span></p>
+                    <p class="ac-last-line">Official Page :<a href="#"> www.microsoft.com</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <button class="bookmark"><i class='bx bx-bookmark'></i></button>
+            <button class="apply-job">Apply for Job</button>
+        </div>
+    </div>
+    <div class="confirmation-box">
+        <p class="ask-submission">Do You want to Apply for this role?.</p>
+        <div class="confirm-button">
+            <form action="#">
+                <button class="c-yes">Yes</button>
+            </form>
+            <button class="c-no" onclick="closeBox();">No</button>
+        </div>
+        <div class="submission-status">
+            <button class="close-btn" onclick="closeBoxAndCon();"><i class='bx bx-x'></i></button>
+            <div class="status-logo">
+                <!-- <i class='bx bx-error-alt fail'></i> -->
+                <i class='bx bx-badge-check success'></i>
+            </div>
+            <span class="submission-message">Successfully applied</span>
+        </div>
+    </div>
+    <script>
+        var resBtn = document.querySelector(".r-btn");
+        var desBtn = document.querySelector(".d-btn");
+        var secondHalf = document.querySelector(".second-half-body");
+        var aboutCompany = document.querySelector(".about-company-details");
+
+        var confirmationBox = document.querySelector(".confirmation-box");
+        var yesBtn = document.querySelector(".c-yes");
+        var subMsg = document.querySelector(".submission-status");
+
+        confirmationBox.style.display = "none";
+        subMsg.style.display = "none";
+        aboutCompany.style.display = "none";
+
+        resBtn.addEventListener("click", ()=> {
+            resBtn.classList.add("active");
+            desBtn.classList.remove("active");
+            secondHalf.style.display = "none";
+            aboutCompany.style.display = "flex";
+        });
+
+        desBtn.addEventListener("click", ()=> {
+            desBtn.classList.add("active");
+            resBtn.classList.remove("active");
+            secondHalf.style.display = "flex";
+            aboutCompany.style.display = "none";
+        });
+
+        document.querySelector(".apply-job").addEventListener("click", ()=> {
+            confirmationBox.style.display = "flex";
+        });
+
+        function closeBox() {
+            confirmationBox.style.display = "none";
+        }
+
+        function closeBoxAndCon() {
+            document.querySelector(".ask-submission").style.display = "block";
+            document.querySelector(".confirm-button").style.display = "flex";
+            subMsg.style.display = "none";
+            closeBox()
+        }
+
+        yesBtn.addEventListener("click", ()=> {
+            document.querySelector(".ask-submission").style.display = "none";
+            document.querySelector(".confirm-button").style.display = "none";
+            subMsg.style.display = "flex";
+        });
+
+    </script>
+</body>
+</html>
