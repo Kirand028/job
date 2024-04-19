@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body, .main-container {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.first-row-container, .footer, .body-container, .first-half-body, .second-half-body, .company-details, 
+.role-details, .role-other-details, .role-details-btn, .about-job, .confirmation-box .confirm-button, 
+.submission-status, .about-company-details {
+    width: 100%;
+}
+
+.first-row-container .header, .footer, .first-half-body, .company-details, .role-details, .role-other-details,
+.role-details-btn, .confirmation-box .confirm-button, .confirmation-box .confirm-button form, .submission-status,
+.status-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.body-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.first-row-container,  .footer {
+    padding: 0 25px;
+}
+
+.first-row-container {
+    height: 90%;
+}
+
+.first-row-container .header {
+    height: 13%;
+    justify-content: space-between;
+}
+
+.header a {
+    color: #000;
+}
+
+.header a i, .footer button i {
+    font-size: 22px;
+}
+
+.header h3, .role-details h3 {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.first-half-body {
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.company-details {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.company-details .company-title {
+    font-size: 11px;
+    color: #999;
+}
+
+.company-details .logo {
+    width: 100px;
+    height: 100px;
+    background-color: #0ac5f3;
+    border-radius: 15px;
+}
+
+.role-details {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.role-details .salary-range {
+    color: #999;
+    font-size: 13px;
+}
+
+.role-other-details {
+    gap: 20px;
+}
+
+.role-other-details span {
+    padding: 2px 15px;
+    border-radius: 5px;
+    font-size: 13px;
+    border: 1px solid #dadada;
+}
+
+.role-details-btn {
+    gap: 20px;
+}
+
+.role-details-btn button{
+    padding: 8px 20px;
+    border-radius: 10px;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #dadada;
+}
+
+.role-details-btn .active {
+    background-color: #0ac5f3;
+    color: #fff;
+}
+
+.second-half-body, .about-company-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeIn .5s linear;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        margin-left: -20px;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.about-job {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 15px;
+}
+
+.about-job h4, .responsibility h4, .about-company-details h4 {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.responsibility ul {
+    padding: 0 25px;
+    margin-bottom: 100px;
+}
+
+.footer {
+    height: 10%;
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    box-shadow: 5px 5px 10px #000;
+    justify-content: space-between;
+    gap: 20px;
+    z-index: 1000;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.footer button {
+    height: 45px;
+    border-radius: 10px;
+}
+
+.footer .bookmark {
+    width: 45px;
+    color: #0ac5f3;
+    background: #fff;
+    border: 1px solid #dadada;
+}
+
+.footer .bookmark i {
+    margin-top: 5px;
+}
+
+.footer .apply-job {
+    width: 80%;
+    background-color: #0ac5f3;
+    color: #fff;
+}
+
+.footer .apply-job:active {
+    height: 44px;
+    width: calc(80% - 1px);
+}
+
+.about-company-details .ac-last-line{
+    margin-bottom: 100px;
+}
+
+.about-company-details p {
+    font-size: 15px;
+}
+
+.confirmation-box {
+    position: absolute;
+    left:50%; 
+    top:50%; 
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    height: 250px;
+    width: 40%;
+    box-shadow:  5px 5px 10px #e6e6e6,
+                -5px -5px 10px #e6e6e6;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.confirmation-box p{
+    text-align: center;
+    padding: 0 10px;
+}
+
+.confirmation-box .confirm-button {
+    height: 50px;
+    gap: 50px;
+}
+
+.confirmation-box .confirm-button form {
+    height: 50px;
+}
+
+.c-yes, .c-no {
+    height: 30px;
+    width: 60px;
+    border-radius: 5px;
+}
+
+.c-yes {
+    background-color: #0ac5f3;
+    color: #fff;
+}
+
+.c-no {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #dadada;
+}
+
+.c-yes:active, .c-no:active {
+    width: 58px;
+    height: 28px;
+}
+
+.submission-status {
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: #0ac5f3; */
+    height: 80%;
+    padding: 0 20px;
+}
+
+.close-btn {
+    position: relative;
+    top: -15px;
+    margin-left: auto;
+    background-color: #fff;
+    font-size: 22px;
+    height: 30px;
+    width: 30px;
+}
+
+.status-logo {
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    box-shadow: 1px 1px 10px #dadada;
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+.status-logo i.success {
+    color: #00cf00;
+}
+
+.status-logo .fail {
+    color: #ff0000;
+}
+
+@media screen and (max-width: 750px) {
+    .confirmation-box {
+        width: 80%;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #b1b1b1;
+}
