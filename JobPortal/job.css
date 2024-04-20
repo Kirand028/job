@@ -79,7 +79,7 @@ html, body, .main-container {
 .company-details .logo {
     width: 100px;
     height: 100px;
-    background-color: #0ac5f3;
+    background-color: #000;
     border-radius: 15px;
 }
 
@@ -117,7 +117,7 @@ html, body, .main-container {
 }
 
 .role-details-btn .active {
-    background-color: #0ac5f3;
+    background-color: #000;
     color: #fff;
 }
 
@@ -182,7 +182,7 @@ button {
 
 .footer .bookmark {
     width: 45px;
-    color: #0ac5f3;
+    color: #000;
     background: #fff;
     border: 1px solid #dadada;
 }
@@ -193,7 +193,7 @@ button {
 
 .footer .apply-job {
     width: 80%;
-    background-color: #0ac5f3;
+    background-color: #000;
     color: #fff;
 }
 
@@ -247,7 +247,7 @@ button {
 }
 
 .c-yes {
-    background-color: #0ac5f3;
+    background-color: #000;
     color: #fff;
 }
 
@@ -265,7 +265,7 @@ button {
 .submission-status {
     flex-direction: column;
     justify-content: space-between;
-    /* background-color: #0ac5f3; */
+    /* background-color: #000; */
     height: 80%;
     padding: 0 20px;
 }

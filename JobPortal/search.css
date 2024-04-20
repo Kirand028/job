@@ -196,13 +196,27 @@ button, input, select {
     border-radius: 15px;
     gap: 15px;
     padding: 0 0 0 15px;
+    animation: fadeIn .5s linear;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        margin-left: -20px;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .search-job-details .company-logo {
     width: 45px;
     height: 45px;
     border-radius: 10px;
-    background-color: yellow;
+    background-color: rgb(131, 255, 245);
 }
 
 .job-title-loc  {

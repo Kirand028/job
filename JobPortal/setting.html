@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="setting.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="first-row-container">
+            <div class="header">
+                <a href=""><i class='bx bx-arrow-back'></i></a>
+                <h3>My Profile</h3>
+                <i></i>
+            </div>
+            <div class="profile-card">
+                <div class="profile-card-first-row">
+                    <div class="profile-img"></div>
+                    <div class="profile-data">
+                        <h3>Username</h3>
+                        <span>Software Engineer</span>
+                        <a href="mailto:abc@gmail.com"><i class='bx bx-envelope'></i>&nbsp;abc@gmail.com</a>
+                    </div>
+                </div>
+                <div class="profile-card-second-row">
+                    <span>Pro user</span>
+                    <span><i class='bx bx-transfer-alt'></i> Last updated</span>
+                </div>
+            </div>
+            <div class="switch-button-container">
+                <button class="sb-container personal-info-btn" onclick="showDetails(1)">
+                    <i class='per-bx bx bx-user bxs-user'></i>
+                    <span>Personal</span>
+                </button>
+                <button class="sb-container education-info-btn" onclick="showDetails(2)">
+                    <i class='edu-bx bx bx-book-reader'></i>
+                    <span>Education</span>
+                </button>
+                <button class="sb-container experience-info-btn" onclick="showDetails(3)">
+                    <i class='exp-bx bx bx-id-card'></i>
+                    <span>Experience</span>
+                </button>
+                <button class="sb-container other-info-btn" onclick="showDetails(4)">
+                    <i class='other-bx bx bx-spreadsheet'></i>
+                    <span>Other</span>
+                </button>
+            </div>
+            <div class="inputs-main-container">
+                <div class="personal details-container showDiv">
+                    <div class="edit-btn">
+                        <span>Personal Details</span>
+                        <button><i class="bx bx-edit"></i></button>
+                    </div>
+                    <form action="#" class="details-form">
+                        <div class="text-inputs">
+                            <div class="input-field">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name" name="first-name" readonly>
+                            </div>
+                            <div class="input-field">
+                                <label for="last-name">Las Name</label>
+                                <input type="text" id="last-name" name="last-name" readonly>
+                            </div>
+                            <div class="input-field">
+                                <label for="gender">Gender</label>
+                                <select id="gender" name="gender">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Unspecify">Unspecify</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" readonly>
+                            </div>
+                            <div class="input-field">
+                                <label for="mobile">Mobile Number</label>
+                                <input type="text" id="mobile" pattern="[0-9]" name="mobile" readonly>
+                            </div>
+                            <div class="input-field">
+                                <label for="dob">Date of Birth</label>
+                                <input type="date" id="dob" name="dob" readonly>
+                            </div>
+                            <div class="input-field">
+                                <label for="current-address">Current Address</label>
+                                <input type="text" id="current-address" name="current-address" readonly>
+                            </div>
+                            <div class="input-field">
+                                <label for="state">State</label>
+                                <input type="text" id="state" name="state" readonly>
+                            </div>
+                            <div class="input-field">
+                                <label for="country">Country</label>
+                                <input type="text" id="country" name="country" readonly>
+                            </div>
+                        </div>
+                        <div class="btn-input">
+                            <button>Save</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="education details-container">
+                    <div class="edit-btn">
+                        <span>Education Details</span>
+                        <button><i class="bx bx-edit"></i></button>
+                    </div>
+                    <form action="#" class="deatils-form">
+                        <div class="text-inputs">
+                            <div class="input-field">
+                                <label for="degree-name">Degree</label>
+                                <input type="text" id="degree-name" name="degree-name" readonly>
+                            </div>
+                            <div class="input-field">
+                                <label for="college-name">School/University</label>
+                                <input type="text" id="college-name" name="college-name" readonly>
+                            </div>
+                            <div class="input-field">
+                                <label for="result">Result</label>
+                                <input type="text" id="result" name="result" readonly>
+                            </div>
+                            <div class="input-field">
+                                <label for="start-from">From</label>
+                                <input type="date" id="start-from" pattern="[0-9]" name="start-from" readonly>
+                            </div>
+                            <div class="input-field">
+                                <label for="to-end">To</label>
+                                <input type="date" id="to-end" name="to-end" readonly>
+                            </div>
+                            
+                        </div>
+                        <div class="btn-input">
+                            <button>Save</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="experience details-container">Exp</div>
+                <div class="other details-container">Other</div>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="home.html"><i class='bx bx-home-alt-2'></i></a>
+            <a href="search.html"><i class='bx bx-search'></i></a>
+            <a href="job-track.html"><i class='bx bx-stats'></i></a>
+            <a href="#"><i class='bx bxs-cog'></i></a>
+        </div>
+    </div>
+    <script>
+        var perBx = document.querySelector(".per-bx");
+        var eduBx = document.querySelector(".edu-bx");
+        var expBx = document.querySelector(".exp-bx");
+        var otherBx = document.querySelector(".other-bx");
+
+        var personal = document.querySelector(".personal");
+        var education = document.querySelector(".education");
+        var experience = document.querySelector(".experience");
+        var other = document.querySelector(".other");
+
+        function showDetails(num) {
+
+            var showDiv = document.querySelector(".showDiv");
+            console.log(showDiv);
+            switch (num) {
+
+                case 1:
+                    perBx.classList.add("bxs-user");
+                    eduBx.classList.remove("bxs-book-reader");
+                    expBx.classList.remove("bxs-id-card");
+                    otherBx.classList.remove("bxs-spreadsheet");
+                    showDiv.classList.remove("showDiv")
+                    personal.classList.add("showDiv");
+                    break;
+                case 2:
+                    perBx.classList.remove("bxs-user");
+                    eduBx.classList.add("bxs-book-reader");
+                    expBx.classList.remove("bxs-id-card");
+                    otherBx.classList.remove("bxs-spreadsheet");
+                    showDiv.classList.remove("showDiv")
+                    education.classList.add("showDiv");
+                    break;
+                case 3:
+                    perBx.classList.remove("bxs-user");
+                    eduBx.classList.remove("bxs-book-reader");
+                    expBx.classList.add("bxs-id-card");
+                    otherBx.classList.remove("bxs-spreadsheet");
+                    showDiv.classList.remove("showDiv")
+                    experience.classList.add("showDiv");
+                    break;
+                case 4:
+                    perBx.classList.remove("bxs-user");
+                    eduBx.classList.remove("bxs-book-reader");
+                    expBx.classList.remove("bxs-id-card");
+                    otherBx.classList.add("bxs-spreadsheet");
+                    showDiv.classList.remove("showDiv")
+                    other.classList.add("showDiv");
+                    break;
+                default:
+                    console.log("Invaild input");
+            }
+        }
+
+    </script>
+</body>
+
+</html>
