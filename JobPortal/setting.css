@@ -361,6 +361,11 @@ input::placeholder {
         height: 60px;
     }
 
+    .profile-img i {
+        top: 15px;
+        left: 22px;
+    }
+
     .credentials {
         height: auto;
     }
