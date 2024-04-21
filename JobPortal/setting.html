@@ -19,7 +19,9 @@
             </div>
             <div class="profile-card">
                 <div class="profile-card-first-row">
-                    <div class="profile-img"></div>
+                    <div class="profile-img">
+                        <i class="profile-select bx bx-pencil"></i>
+                    </div>
                     <div class="profile-data">
                         <h3>Username</h3>
                         <span>Software Engineer</span>
@@ -221,6 +223,10 @@
                     <form action="#" class="deatils-form">
                         <div class="text-inputs">
                             <div class="input-field">
+                                <label for="resume-cv">Resume or Cv <small> *.pdf, *.doc of 1 MB or Less</small></label>
+                                <input type="file" name="resume-cv" id="resume-cv" class="resume-cv">
+                            </div>
+                            <div class="input-field">
                                 <label for="relocation">Willing to Relocate</label>
                                 <select id="relocation" name="relocation">
                                     <option value="Depends">Depends</option>
@@ -248,6 +254,19 @@
                 </div>
             </div>
         </div>
+        
+        <div class="profile-img-container">
+            <!-- <h5>Error Message</h5> -->
+            <button class="close"><i class="bx bx-x"></i></button>
+            <span>Select Your Profile</span>
+            <form action="#">
+                <input type="file" name="" id="profile-select" accept="image/*">
+                <i class='bx bxs-cloud-upload'></i>
+                <span>select image of type jpg, img, png</span>
+                <button class="set">Set</button>
+            </form>
+        </div>
+
         <div class="footer">
             <a href="home.html"><i class='bx bx-home-alt-2'></i></a>
             <a href="search.html"><i class='bx bx-search'></i></a>
@@ -315,6 +334,24 @@
             credDiv.style.display == "flex"?credDiv.style.display = "none":credDiv.style.display = "flex";
         }
 
+        var profileContainer = document.querySelector(".profile-img-container");
+        var profileSelectBtn = document.querySelector(".profile-select");
+        var profileSetBtn = document.querySelector(".set");
+        profileSetBtn.style.display = "none";
+        profileSelectBtn.addEventListener("click", () => {
+            profileContainer.style.display == "flex"?profileContainer.style.display = "none":profileContainer.style.display = "flex";
+        });
+
+        document.querySelector(".close").addEventListener("click", () => {
+            profileContainer.style.display = "none";
+        });
+
+        document.querySelector(".bxs-cloud-upload").addEventListener("click", () => {
+            document.querySelector("#profile-select").click();
+            profileSetBtn.style.display = "block";
+
+        });
+        
     </script>
 </body>
 

@@ -30,14 +30,14 @@ button, input, select {
 }
 
 .main-container, .first-row-container, .profile-card, .profile-card-first-row .profile-data, .sb-container,
-.details-container {
+.details-container, .profile-img-container form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .header, .profile-card-first-row, .profile-card-second-row, .profile-card span a, .profile-data a, .profile-card-second-row,
-.profile-card-second-row span, .switch-button-container, .edit-btn, .text-inputs, .btn-input {
+.profile-card-second-row span, .profile-img, .switch-button-container, .edit-btn, .text-inputs, .btn-input {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -73,6 +73,30 @@ button, input, select {
     border-radius: 20px;
 }
 
+.profile-card .profile-img {
+    justify-content: center;
+}
+
+.profile-img i {
+    position: relative;
+    background-color: #fff;
+    padding: 4px;
+    border: 1px solid #000;
+    border-radius: 15px;
+    top: 22px;
+    left: 30px;
+    cursor: pointer;
+}
+
+.profile-img-container form #profile-select{
+    position: relative;
+    width: 0 !important;
+    height: 0 !important;
+    top: 22px;
+    left: 30px;
+    cursor: pointer;
+}
+
 .profile-card-first-row {
     height: 75%;
     gap: 15px;
@@ -83,8 +107,9 @@ button, input, select {
 .profile-card-first-row .profile-img {
     width: 80px;
     height: 80px;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     border-radius: 50%;
+    border: 1px solid #fff;
 }
 
 .profile-card-first-row .profile-data {
@@ -252,6 +277,75 @@ button, input, select {
     font-size: 20px;
 }
 
+.profile-img-container {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    left:50%; 
+    top:50%; 
+    padding: 10px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    height: 250px;
+    width: 40%;
+    box-shadow:  2px 2px 2px #dfdfdf,
+                -2px -2px 2px #dfdfdf;
+    border-radius: 20px;
+}
+
+.profile-img-container h5 {
+    font: 13px;
+    font-weight: 500;
+}
+
+.profile-img-container span {
+    position: relative;
+    font-weight: 500;
+}
+
+.profile-img-container form span, .input-field label small {
+    color: #b3b3b3;
+    font-size: 11px;
+    padding-bottom: 10px;
+}
+
+.close {
+    font-size: 22px;
+    color: #000;
+    position: relative;
+    top: -30px;
+    margin-left: auto; 
+}
+
+.bxs-cloud-upload {
+    font-size: 70px;
+    color: #ff6347;
+    cursor: pointer;
+}
+
+.set {
+    border: 1px solid #ff6347;
+    padding: 6px 35px;
+    border-radius: 8px;
+}
+
+.resume-cv::-webkit-file-upload-button {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.resume-cv::before {
+    content: 'Resume or Cv';
+    background-color: #000;
+    color: #fff;
+    border-radius: 8px;
+    padding: 5px 12px;
+    cursor: pointer;
+}
+
 input::placeholder {
     color: #b1b1b1;
 }
@@ -278,6 +372,10 @@ input::placeholder {
 
     .input-field, .input-field input {
         width: 100%;
+    }
+
+    .profile-img-container {
+        width: 80%;
     }
 
     ::-webkit-scrollbar {
