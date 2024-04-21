@@ -25,7 +25,7 @@ button, input, select {
 }
 
 .first-row-container, .header, .profile-card, .profile-card-first-row, .profile-card-second-row,
-.switch-button-container, .inputs-main-container, .edit-btn, .details-form, .text-inputs, .btn-input {
+.switch-button-container, .inputs-main-container, .details-container, .edit-btn, .details-form, .text-inputs, .btn-input {
     width: 100%;
 }
 
@@ -36,7 +36,7 @@ button, input, select {
     align-items: center;
 }
 
-.header, .profile-card-first-row, .profile-card-second-row, .profile-data a, .profile-card-second-row,
+.header, .profile-card-first-row, .profile-card-second-row, .profile-card span a, .profile-data a, .profile-card-second-row,
 .profile-card-second-row span, .switch-button-container, .edit-btn, .text-inputs, .btn-input {
     display: flex;
     flex-direction: row;
@@ -49,7 +49,7 @@ button, input, select {
     overflow-y: auto;
 }
 
-.header, .profile-card, .switch-button-container {
+.header, .profile-card, .credentials, .switch-button-container {
     flex-shrink: 0;
 }
 
@@ -108,6 +108,10 @@ button, input, select {
     border-radius: 10px;
 }
 
+.profile-card span a {
+    color: #fff;
+}
+
 .profile-data a, .profile-card-second-row span {
     color: #fff;
     font-size: 12px;
@@ -119,6 +123,20 @@ button, input, select {
     border-top: 1px solid #888;
     padding: 5px 30px;
     justify-content: space-between;
+}
+
+.credentials {
+    margin-top: 15px;
+    height: 25%;
+}
+
+.cred {
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+}
+
+.cred-form {
+    margin-top: 10px;
 }
 
 .switch-button-container {
@@ -161,7 +179,6 @@ button, input, select {
 }
 
 .text-inputs {
-    /* border: 1px solid blue; */
     gap: 10px;
     flex-wrap: wrap;
 }
@@ -170,8 +187,13 @@ button, input, select {
     justify-content: space-between;
 }
 
-.edit-btn span {
+.edit-btn span, .skills-head, .project-head {
     font-size: 14px;
+    font-weight: 500;
+}
+
+.skills-head, .project-head {
+    margin: 15px 0;
 }
 
 .edit-btn button {
@@ -191,10 +213,11 @@ button, input, select {
 }
 
 .input-field input, .input-field select {
-    border: 1px solid gray;
+    border: 1px solid #bbb;
     width: 100%;
     padding: 8px 20px;
-    border-radius: 15px;
+    border-radius: 8px;
+    background-color: #fff;
 }
 
 .btn-input {
@@ -227,6 +250,10 @@ button, input, select {
     font-size: 20px;
 }
 
+input::placeholder {
+    color: #b1b1b1;
+}
+
 @media screen and (max-width: 750px) {
 
     .profile-card {
@@ -238,8 +265,12 @@ button, input, select {
         height: 60px;
     }
 
+    .credentials {
+        height: auto;
+    }
+
     .switch-button-container {
-    align-items: center;
+        align-items: center;
     }
 
     .input-field, .input-field input {

@@ -27,9 +27,30 @@
                     </div>
                 </div>
                 <div class="profile-card-second-row">
-                    <span>Pro user</span>
-                    <span><i class='bx bx-transfer-alt'></i> Last updated</span>
+                    <span><a href="www.google.com">Portfolio <i class="bx bx-right-arrow"></i></a></span>
+                    <span class="cred" onclick="showCredentialsDiv()">Credentials &nbsp;<i class='bx bx-key'></i></span>
                 </div>
+            </div>
+            <div class="credentials details-container">
+                <div class="edit-btn">
+                    <span>Credentials Deatils</span>
+                    <button><i class="bx bx-edit"></i></button>
+                </div>
+                <form action="#" class="cred-form details-form">
+                    <div class="text-inputs">
+                        <div class="input-field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" readonly placeholder="eg: Markmusk@gmail.com">
+                        </div>
+                        <div class="input-field">
+                            <label for="last-name">Passowrd</label>
+                            <input type="password" id="password" name="password" readonly>
+                        </div>
+                    </div>
+                    <div class="btn-input">
+                        <button>Save</button>
+                    </div>
+                </form>
             </div>
             <div class="switch-button-container">
                 <button class="sb-container personal-info-btn" onclick="showDetails(1)">
@@ -59,43 +80,43 @@
                         <div class="text-inputs">
                             <div class="input-field">
                                 <label for="first-name">First Name</label>
-                                <input type="text" id="first-name" name="first-name" readonly>
+                                <input type="text" id="first-name" name="first-name" readonly placeholder="eg: Elon">
                             </div>
                             <div class="input-field">
-                                <label for="last-name">Las Name</label>
-                                <input type="text" id="last-name" name="last-name" readonly>
+                                <label for="last-name">Last Name</label>
+                                <input type="text" id="last-name" name="last-name" readonly placeholder="eg: Juckerberg">
                             </div>
                             <div class="input-field">
                                 <label for="gender">Gender</label>
                                 <select id="gender" name="gender">
+                                    <option value="Unspecify">Unspecify</option>
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
-                                    <option value="Unspecify">Unspecify</option>
                                 </select>
                             </div>
                             <div class="input-field">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" readonly>
-                            </div>
-                            <div class="input-field">
                                 <label for="mobile">Mobile Number</label>
-                                <input type="text" id="mobile" pattern="[0-9]" name="mobile" readonly>
+                                <input type="text" id="mobile" pattern="[0-9]" name="mobile" readonly placeholder="eg: +91 9876543210">
                             </div>
                             <div class="input-field">
                                 <label for="dob">Date of Birth</label>
                                 <input type="date" id="dob" name="dob" readonly>
                             </div>
                             <div class="input-field">
+                                <label for="portfolio">Portfolio Link</label>
+                                <input type="text" id="portfolio" name="portfolio" readonly placeholder="eg: elon.github/portfolio">
+                            </div>
+                            <div class="input-field">
                                 <label for="current-address">Current Address</label>
-                                <input type="text" id="current-address" name="current-address" readonly>
+                                <input type="text" id="current-address" name="current-address" readonly placeholder="eg: Ecity, Bangalore">
                             </div>
                             <div class="input-field">
                                 <label for="state">State</label>
-                                <input type="text" id="state" name="state" readonly>
+                                <input type="text" id="state" name="state" readonly placeholder="eg: Karnataka">
                             </div>
                             <div class="input-field">
                                 <label for="country">Country</label>
-                                <input type="text" id="country" name="country" readonly>
+                                <input type="text" id="country" name="country" readonly placeholder="eg: India">
                             </div>
                         </div>
                         <div class="btn-input">
@@ -105,30 +126,85 @@
                 </div>
                 <div class="education details-container">
                     <div class="edit-btn">
-                        <span>Education Details</span>
+                        <span>Highest Level Education Details</span>
                         <button><i class="bx bx-edit"></i></button>
                     </div>
                     <form action="#" class="deatils-form">
                         <div class="text-inputs">
                             <div class="input-field">
                                 <label for="degree-name">Degree</label>
-                                <input type="text" id="degree-name" name="degree-name" readonly>
+                                <input type="text" id="degree-name" name="degree-name" readonly placeholder="eg: MCA">
                             </div>
                             <div class="input-field">
                                 <label for="college-name">School/University</label>
-                                <input type="text" id="college-name" name="college-name" readonly>
+                                <input type="text" id="college-name" name="college-name" readonly placeholder="eg: Bangalore University">
                             </div>
                             <div class="input-field">
                                 <label for="result">Result</label>
-                                <input type="text" id="result" name="result" readonly>
+                                <input type="text" id="result" name="result" readonly placeholder="eg: 93%">
                             </div>
                             <div class="input-field">
                                 <label for="start-from">From</label>
                                 <input type="date" id="start-from" pattern="[0-9]" name="start-from" readonly>
                             </div>
                             <div class="input-field">
-                                <label for="to-end">To</label>
+                                <label for="to-end">To (Actual or expected)</label>
                                 <input type="date" id="to-end" name="to-end" readonly>
+                            </div>
+                        </div>
+                        <div class="skills-head">Skills</div>
+                        <div class="text-inputs">
+                            <div class="input-field">
+                                <label for="tech-skills">Technical Skills</label>
+                                <input type="text" id="tech-skills" name="tech-skills" readonly placeholder="eg: Seperate skills by Comma">
+                            </div>
+                            <div class="input-field">
+                                <label for="soft-skills">Soft Skills</label>
+                                <input type="text" id="soft-skills" name="soft-skills" readonly placeholder="eg: Seperate skills By Comma">
+                            </div>
+                        </div>
+                        <div class="project-head">Latest Project</div>
+                        <div class="text-inputs">
+                            <div class="input-field">
+                                <label for="project">Project Title</label>
+                                <input type="text" id="project" name="project" readonly placeholder="eg: Banking App">
+                            </div>
+                            <div class="input-field">
+                                <label for="peoject-desc">Description</label>
+                                <input type="text" id="project-desc" name="project-desc" readonly placeholder="eg: Android App made using Java">
+                            </div>
+                            <div class="input-field">
+                                <label for="project-skill">Skills Used</label>
+                                <input type="text" id="project-skill" name="project-skill" readonly placeholder="eg: Java, Android Studio">
+                            </div>
+                        </div>
+                        <div class="btn-input">
+                            <button>Save</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="experience details-container">
+                    <div class="edit-btn">
+                        <span>Your Previous Employee Details</span>
+                        <button><i class="bx bx-edit"></i></button>
+                    </div>
+                    <form action="#" class="deatils-form">
+                        <div class="text-inputs">
+                            <div class="input-field">
+                                <label for="role-name">Title</label>
+                                <input type="text" id="role-name" name="role-name" readonly placeholder="eg: Software Engineer">
+                            </div>
+                            <div class="input-field">
+                                <label for="company-name">Company Name</label>
+                                <input type="text" id="company-name" name="company-name" readonly placeholder="eg: Google">
+                            </div>
+                            <div class="input-field">
+                                <label for="total-exp">Total Year of Experience</label>
+                                <input type="text" id="total-exp" name="total-exp" readonly placeholder="eg: 5">
+                            </div>
+                            <div class="input-field">
+                                <label for="prev-salary">Annual Salary</label>
+                                <input type="text" id="prev-salary" pattern="[0-9]" name="prev-salary" readonly placeholder="eg: 25 LPA">
                             </div>
                             
                         </div>
@@ -137,8 +213,39 @@
                         </div>
                     </form>
                 </div>
-                <div class="experience details-container">Exp</div>
-                <div class="other details-container">Other</div>
+                <div class="other details-container">
+                    <div class="edit-btn">
+                        <span>Other Details</span>
+                        <button><i class="bx bx-edit"></i></button>
+                    </div>
+                    <form action="#" class="deatils-form">
+                        <div class="text-inputs">
+                            <div class="input-field">
+                                <label for="relocation">Willing to Relocate</label>
+                                <select id="relocation" name="relocation">
+                                    <option value="Depends">Depends</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="notice">Notice Period</label>
+                                <select id="notice" name="notice">
+                                    <option value="3month">More than or equal to 3months</option>
+                                    <option value="1month">More than or equal to 1month</option>
+                                    <option value="15days">Less than or equal to 15days</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="citizenship">Citizenship</label>
+                                <input type="text" id="citizenship" name="citizenship" readonly placeholder="eg: India">
+                            </div>
+                        </div>
+                        <div class="btn-input">
+                            <button>Save</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
         <div class="footer">
@@ -200,6 +307,12 @@
                 default:
                     console.log("Invaild input");
             }
+        }
+
+        var credDiv = document.querySelector(".credentials");
+        credDiv.style.display = "none";
+        function showCredentialsDiv() {
+            credDiv.style.display == "flex"?credDiv.style.display = "none":credDiv.style.display = "flex";
         }
 
     </script>
