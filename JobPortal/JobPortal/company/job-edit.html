@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Details</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="job-post.css">
+    <style>
+        .first-row-container {
+            height: 100%;
+        }
+        .header {
+            justify-content: space-between;
+        }
+        .header a {
+            color: #000;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="first-row-container">
+            <div class="header">
+                <a href="job-list.html"><i class="bx bx-arrow-back"></i></a>
+                <h3>Job Update</h3>
+                <i></i>
+            </div>
+            <div class="body-container">
+                <div class="company-head">
+                    <div class="main-company-logo"><i class="bx bx-home-alt-2"></i></div>
+                    <div class="company-name-slogan">
+                        <span>Microsoft</span>
+                        <p>Just die</p>
+                    </div>
+                </div>
+                <div class="sub-head">Update job details</div>
+                <form class="post-form">
+
+                    <div class="input-row company-details">
+                        <p class="input-head">Company Information</p>
+                        <div class="inputs-container">
+                            <div class="input-field">
+                                <label for="company-name">Company Name</label>
+                                <input type="text" value="Microsoft" id="company-name" name="company-name" placeholder="eg: Microsoft" readonly>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-row job-details">
+                        <p class="input-head">Job Details</p>
+                        <div class="inputs-container">
+                            <div class="input-field">
+                                <label for="role-name">Job Title</label>
+                                <input type="text" id="role-name" name="role-name" placeholder="eg: Software Engineer">
+                            </div>
+                            <div class="input-field">
+                                <label for="job-industry">Job Industry</label>
+                                <select name="job-industry" id="job-industry">
+                                    <option>It</option>
+                                    <option>Finance</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="salary">Annual Salary</label>
+                                <input type="text" id="salary" name="salary" placeholder="eg: $20K - $30K">
+                            </div>
+                            <div class="input-field">
+                                <label for="job-type">Job Type</label>
+                                <select name="job-type" id="job-type">
+                                    <option>Full Time</option>
+                                    <option>Contract</option>
+                                    <option>Intern</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="city-name">City</label>
+                                <input type="text" id="city-name" name="city-name" placeholder="eg: Bangalore">
+                            </div>
+                            <div class="input-field">
+                                <label for="remote">Remote</label>
+                                <select name="remote" id="remote">
+                                    <option>On site</option>
+                                    <option>Hybrid</option>
+                                    <option>Remote</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-row job-description">
+                        <p class="input-head">Job Description</p>
+                        <div class="inputs-container">
+                            <div class="input-field">
+                                <label for="expeirnce">Experience</label>
+                                <input type="text" id="expeirnce" name="expeirnce" placeholder="eg: 3-5 years">
+                            </div>
+                            <div class="input-field">
+                                <label for="job-desc">Job Description</label>
+                                <textarea name="job-desc" id="job-desc" placeholder="Job Description"></textarea>
+                            </div>
+                            <div class="input-field">
+                                <label for="job-resp">Job Responsibilities</label>
+                                <textarea name="job-resp" id="job-resp" placeholder="Job Responsibilities"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-row location">
+                        <p class="input-head">Location</p>
+                        <div class="inputs-container">
+                            <div class="input-field">
+                                <label for="full-address">Full Address</label>
+                                <input type="text" id="full-address" name="full-address" placeholder="eg: 2nd street Ecity, Bangalore, karnataka 563749">
+                            </div>
+                            <div class="input-field">
+                                <label for="country">Country</label>
+                                <input type="text" id="country" name="country" placeholder="eg: India">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-row op-btn">
+                        <button class="cancel-btn">Cancel</button>
+                        <button class="post-btn">Update this Job</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script>
+
+        var resBtn = document.querySelector(".r-btn");
+
+    </script>
+</body>
+</html>

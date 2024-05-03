@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jobQuest</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+  <nav>
+    <ul class="sidebar">
+      <li onclick="hideSidebar()" class="hide-btn">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+            <path
+              d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+          </svg>
+        </a>
+      </li>
+      <li><a href="#" style="color: #000;" onclick="showMainDiv('login')">Login</a></li>
+      <li><a href="#" style="color: #000;" onclick="showMainDiv('candidate')">Candidate</a></li>
+      <li><a href="company-signup.html" style="color: #000;">Company</a></li>
+      <li><a href="#" style="color: #000;" onclick="showMainDiv('about')">About</a></li>
+      <li><a href="#" style="color: #000;" onclick="showMainDiv('contact')">Contact</a></li>
+    </ul>
+    <ul>
+      <li><a href="#" class="logo" onclick="showMainDiv('home')">jobQuest</a></li>
+      <li class="hideOnMobile"><a href="#" onclick="showMainDiv('login')">Login</a></li>
+      <li class="hideOnMobile"><a href="#" onclick="showMainDiv('candidate')">Candidate</a></li>
+      <li class="hideOnMobile"><a href="company-signup.html">Company</a></li>
+      <li class="hideOnMobile"><a href="#" onclick="showMainDiv('about')">About</a></li>
+      <li class="hideOnMobile"><a href="#" onclick="showMainDiv('contact')">Contact</a></li>
+      <li class="menu-button" onclick="showSidebar();">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+            <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="main-container">
+    <div class="page home active-page">
+      Home
+    </div>
+    <div class="page login">
+      <div class="form-container">
+        <p class="title">Login</p>
+        <form class="form">
+          <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" placeholder="">
+          </div>
+          <div class="input-group">
+            <label for="log-password">Password</label>
+            <input type="password" name="log-password" id="log-password" placeholder="">
+            <div class="forgot">
+              <a rel="noopener noreferrer" href="#">Forgot Password ?</a>
+            </div>
+          </div>
+          <button class="sign">Sign in</button>
+        </form>
+      </div>
+
+    </div>
+    <div class="page candidate">
+      <div class="form-container">
+        <p class="title">Candidate</p>
+        <form action="#" method="post" class="form">
+            <div class="c-name-flex">
+              <div class="input-group">
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname" required>
+              </div>
+              <div class="input-group">
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" required>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+              <label for="mobile">Mobile:</label>
+              <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+            </div>
+            <div class="input-group">
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" minlength="8" required>
+            </div>
+            <div class="input-group">
+              <label for="confirm_password">Confirm Password:</label>
+              <input type="password" id="confirm_password" name="confirm_password" minlength="8" required>
+            </div>
+            <button class="sign sign-up">Sign Up</button>
+        </form>
+      </div>
+    </div>
+    <div class="page about">
+      <div class="about-us">
+        <div class="about-first-row"> 
+          <p class="title">About Us</p>
+          <p>Welcome to jobQuest, your trusted partner in finding the perfect career opportunities.</p>
+          <p>At jobQuest, we understand the importance of connecting talented individuals with their dream jobs and helping companies find the right candidates to drive their success. With our user-friendly platform and comprehensive resources, we strive to make the job search and recruitment process seamless and efficient for both job seekers and employers.</p>
+          <p>Our mission is to empower individuals to build fulfilling careers and assist businesses in building exceptional teams. Whether you're a recent graduate looking for your first job, a seasoned professional seeking new challenges, or a company in search of top talent, [JobPortalName] is here to support you every step of the way.</p>
+        </div>
+        <div class="about-second-row">
+          <h4>Why choose jobQuest</h4>
+          <ul>
+            <li>Extensive Job Listings: We offer a vast array of job opportunities across various industries and sectors to cater to diverse preferences and skill sets.</li>
+            <li>User-Friendly Interface: Our intuitive platform makes it easy to search for jobs, apply with just a few clicks, and manage your applications efficiently.</li>
+            <li>Advanced Filtering Options: Refine your job search with advanced filtering options to find the perfect match based on location, industry, experience level, and more.</li>
+            <li>Resume Building and Optimization: Access tools and resources to create professional resumes and optimize your profile for maximum visibility to employers.</li>
+            <li>Dedicated Support: Our team of experts is committed to providing exceptional customer service and support to address any questions or concerns you may have.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="page contact">
+      contact
+    </div>
+  </div>
+
+  <script>
+    function showSidebar() {
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'flex'
+    }
+    function hideSidebar() {
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'none'
+    }
+
+    function showMainDiv(divName) {
+      document.querySelector(".active-page").classList.remove("active-page");
+      if (divName == "home") {
+        document.querySelector(".home").classList.add("active-page");
+        console.log("ok");
+      }
+      else if (divName == "login") {
+        document.querySelector(".login").classList.add("active-page");
+      }
+      else if (divName == "candidate") {
+        document.querySelector(".candidate").classList.add("active-page");
+      }
+      else if (divName == "about") {
+        document.querySelector(".about").classList.add("active-page");
+      }
+      else if (divName == "contact") {
+        document.querySelector(".contact").classList.add("active-page");
+      }
+    }
+
+
+  </script>
+</body>
+
+</html>

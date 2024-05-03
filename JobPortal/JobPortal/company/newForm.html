@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="company-form.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <div class="header">
+            <h4>jobQuest</h4>
+            <div class="switch-btn">
+                <button onclick="window.location.href = './index.html'">Home</button>
+                <button onclick="showForm(1);">Login</button>
+                <button onclick="showForm(2);">Register</button>
+            </div>
+        </div>
+        <div class="form-container-div">
+            <div class="login-container sign-form showDiv">
+                <div class="form-container">
+                    <p class="title">Login</p>
+                    <form class="form">
+                        <div class="input-group">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" id="username" placeholder="">
+                        </div>
+                        <div class="input-group">
+                            <label for="log-password">Password</label>
+                            <input type="password" name="log-password" id="log-password" placeholder="">
+                            <div class="forgot">
+                                <a rel="noopener noreferrer" href="#">Forgot Password ?</a>
+                            </div>
+                        </div>
+                        <button class="sign">Sign in</button>
+                    </form>
+                </div>
+            </div>
+            <div class="register-container sign-form ">
+                <p class="title">Register</p>
+                <div class="sub-head">
+                    <p>Register a new company</p>
+                </div>
+                <form class="signup-container">
+                    <div class="signup-form-container">
+                        <div class="company-details first">
+                            <div class="form-group">
+                                <label for="company_name">Company Name</label>
+                                <input type="text" id="company_name" name="company_name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password" minlength="8" required>
+                            </div>
+                        </div>
+                        <div class="company-details second">
+                            <div class="form-group logo-up">
+                                <label for="company_logo">Company Logo</label>
+                                <div class="upload-container">
+                                    <i class='bx bxs-cloud-upload'></i>
+                                    <p class="img-name">image-name.jpg</p>
+                                </div>
+                                <span class="condition">upload img, png, jpeg/jpg of <b>350kb</b> or less</span>
+                                <input type="file" id="company_logo" class="company_logo" name="company_logo"
+                                    accept="image/*" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="ceo">CEO</label>
+                                <input type="text" id="ceo" name="ceo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company_size">Company Size</label>
+                                <select id="company_size" name="company_size" required>
+                                    <option value="">Select Company Size</option>
+                                    <option value="1-10">1-10 Employees</option>
+                                    <option value="11-50">11-50 Employees</option>
+                                    <option value="51-200">51-200 Employees</option>
+                                    <option value="201-500">201-500 Employees</option>
+                                    <option value="501+">501-1000 Employees</option>
+                                    <option value="1001+">1001+ Employees</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="hq">Headquarters</label>
+                                <input type="text" id="hq" name="hq" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="started_year">Started Year</label>
+                                <input type="number" id="started_year" name="started_year" min="1900" max="2099" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="official_page_link">Official Page Link</label>
+                                <input type="url" id="official_page_link" name="official_page_link" required>
+                            </div>
+                        </div>
+                        <div class="company-details third">
+                            <div class="form-group">
+                                <label for="industry">Industry</label>
+                                <select name="industry" id="industry">
+                                    <option value="It">Fintech</option>
+                                    <option value="It">Information technology</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="about_company">About Company</label>
+                                <textarea id="about_company" class="text-area" name="about_company" rows="4"
+                                    required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-div">
+                        <a class="cancel btn">Cancel</a>
+                        <button class="btn">save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        function showForm(num) {
+            document.querySelector(".showDiv").classList.remove("showDiv");
+            if (num === 1) {
+                document.querySelector(".login-container").classList.add("showDiv");
+            }
+            else if (num === 2) {
+                document.querySelector(".register-container").classList.add("showDiv");
+            }
+        }
+        var fileBtn = document.querySelector(".company_logo");
+        document.querySelector(".bxs-cloud-upload").addEventListener("click", () => {
+            fileBtn.click();
+        });
+
+        fileBtn.addEventListener("change", () => {
+            var fileName = fileBtn.files[0].name;
+            document.querySelector(".img-name").innerText = fileName;
+            console.log(fileName);
+        });
+    </script>
+
+</body>
+
+</html>

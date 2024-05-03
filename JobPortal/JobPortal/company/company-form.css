@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body, .main-container {
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    background-color: #000;
+    color: #fff;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.header h4{
+    color: #fff;
+    font-family: "Pacifico", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.switch-btn {
+    display: flex;
+    gap: 20px;
+}
+
+.switch-btn button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+.header h4:hover, .header .switch-btn button:hover {
+    color: #ff6347;
+}
+
+.form-container-div {
+    width: 100%;
+    height: 90%;
+    overflow-y: auto;
+}
+
+.login-container {
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.showDiv {
+    display: flex !important;
+    justify-content: center;
+}
+
+.register-container {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    gap: 5px;
+}
+
+.sub-head {
+    width: 90%;
+    background-color: #fff;
+    border: 1px solid #f1f1f1;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.sub-head p {
+    font-size: 13px;
+    padding:  10px;
+    font-weight: 500;
+    
+}
+
+.signup-container {
+    width: 90%;
+    /* border: 1px solid ; */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.signup-form-container {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: space-around;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    color: #000;
+    flex-wrap: wrap;
+    border: 1px solid #f1f1f1;
+}
+
+.company-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: #555;
+}
+
+.form-group input,
+.form-group select,
+.upload-container {
+    background-color: #fff;
+    width: 300px;
+    height: 35px;
+    padding: 5px 15px;
+    border: 1px solid #aaa;
+    outline: none;
+    border-radius: 8px;
+}
+
+.condition {
+    color: #aaa;
+    font-size: 10px;
+}
+
+.text-area {
+    width: 300px;
+    height: 100px;
+    resize: none;
+    border: 1px solid #aaa;
+    outline: none;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+input:focus,
+select:focus,
+.text-area:focus {
+    border-color: #ff6347;
+}
+
+.company_logo {
+    width: 0 !important;
+    height: 0 !important;
+    visibility: hidden;
+    border: none;
+    display: none;
+}
+
+.upload-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bxs-cloud-upload {
+    color: #ff6347;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.btn-div {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    padding-bottom: 30px;
+}
+
+.btn {
+    width: 50%;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #ff6347;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.cancel {
+    background-color: #555;
+}
+
+@media screen and (max-width:750px) {
+    .signup-container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .form-container {
+        width: 90%;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #555;
+}

@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body, .main-container {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.first-row-container, .footer, .body-container, .first-half-body, .second-half-body, .company-details, 
+.role-details, .role-other-details, .role-details-btn, .about-job, .applicants-list {
+    width: 100%;
+}
+
+.first-row-container .header, .footer, .first-half-body, .company-details, .role-details, .role-other-details,
+.role-details-btn, .candidate-box, .candidate-pic, .operation-div a, .operation-div button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.body-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.first-row-container,  .footer {
+    padding: 0 25px;
+}
+
+.first-row-container {
+    height: 90%;
+    overflow-y: auto;
+    padding-bottom: 30px;
+}
+
+.first-row-container .header {
+    height: 13%;
+    justify-content: space-between;
+}
+
+.header a {
+    color: #000;
+}
+
+.header a i, .footer button i {
+    font-size: 22px;
+}
+
+.header h3, .role-details h3 {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.first-half-body {
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.company-details {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.company-details .company-title {
+    font-size: 11px;
+    color: #999;
+}
+
+.company-details .logo {
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    border-radius: 15px;
+}
+
+.role-details {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.role-details .salary-range {
+    color: #999;
+    font-size: 13px;
+}
+
+.role-other-details {
+    gap: 20px;
+}
+
+.role-other-details span {
+    padding: 2px 15px;
+    border-radius: 5px;
+    font-size: 13px;
+    border: 1px solid #dadada;
+}
+
+.role-details-btn {
+    gap: 20px;
+}
+
+.role-details-btn button{
+    padding: 8px 20px;
+    border-radius: 10px;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #dadada;
+}
+
+.role-details-btn .active {
+    background-color: #000;
+    color: #fff;
+}
+
+.second-half-body, .applicants-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeIn .5s linear;
+}
+
+.applicants-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        margin-left: -20px;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.about-job {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 15px;
+}
+
+.about-job h4, .responsibility h4, .applicants-list h4 {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.responsibility ul {
+    padding: 0 25px;
+    margin-bottom: 100px;
+}
+
+.footer {
+    height: 10%;
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    box-shadow: 5px 5px 10px #000;
+    justify-content: space-between;
+    gap: 20px;
+    z-index: 1000;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.footer button {
+    height: 45px;
+    border-radius: 10px;
+}
+
+.footer .bookmark {
+    width: 45px;
+    color: #000;
+    background: #fff;
+    border: 1px solid #dadada;
+}
+
+.footer .bookmark i {
+    margin-top: 5px;
+}
+
+.footer .close-job {
+    width: 80%;
+    background-color: #000;
+    color: #fff;
+}
+
+.footer .close-job:active {
+    height: 44px;
+    width: calc(80% - 1px);
+}
+
+.candidate-box {
+    flex: 1 1 380px;
+    height: 120px;
+    /* border: 1px solid red; */
+    justify-content: space-evenly;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow:  2px 2px 10px #e6e6e6,
+                -2px -2px 10px #f5f5f5;
+    border-radius: 15px;
+    gap: 5px;
+}
+
+.candidate-box .candidate-pic {
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 8px;
+}
+
+.candidate-box .candidate-name-title, .operation-div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.candidate-name-title {
+    width: 50%;
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+}
+
+.candidate-name-title .cand-name {
+    font-size: 15px;
+}
+
+.candidate-name-title span {
+    font-size: 12px;
+    color: #555;
+}
+
+.operation-div {
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.operation-div a {
+    border: 1px solid #000;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 10px;
+    width: 100%;
+    height: 25px;
+}
+
+.operation-div button {
+    width: 100%;
+    height: 25px;
+    font-size: 10px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    background-color: #fff;
+    color: #000;
+    padding: 0 10px;
+}
+
+.operation-div a:hover, .operation-div button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+@media screen and (max-width: 750px) {
+
+    .candidate-box {
+        width: 100%;
+    }
+
+    .candidate-name-title {
+        width: 60%; 
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #b1b1b1;
+}

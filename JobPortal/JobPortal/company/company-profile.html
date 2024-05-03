@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="company-profile.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="first-row-container">
+
+            <div class="profile-image-container">
+                <div class="cover-bg"></div>
+                <div class="main-img-container">
+                    <div class="image"></div>
+                    <div class="primary-details">
+                        <h4>Microsoft</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga alias numquam soluta molestias
+                            ea provident reiciendis neque libero dolorem, distinctio ipsa inventore consectetur
+                            veritatis nostrum voluptatem modi fugit consequatur magni.</p>
+                    </div>
+                    <div class="secondary-details">
+                        <p><i class="bx bx-current-location"></i> <span>India</span></p>
+                        <p><i class="bx bx-category"></i> <span>Information technology</span></p>
+                        <p><i class="bx bx-user"></i> <span>200K+</span></p>
+                    </div>
+                </div>
+            </div>
+            
+            <form action="#" class="profile-form">
+                <div class="edit-div"><a href="#" onclick="editSwitch();">Edit<i class="bx bx-pencil"></i></a></div>
+
+                <div class="company-details first">
+                    <div class="form-group">
+                        <label for="company_name">Company Name</label>
+                        <input type="text" id="company_name" name="company_name" required readonly class="editable" placeholder="eg: Microsoft">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required readonly class="editable" placeholder="eg: microsoft@hr.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" minlength="8" required readonly class="editable">
+                    </div>
+                </div>
+                <div class="company-details second">
+                    <div class="form-group">
+                        <label for="ceo">CEO</label>
+                        <input type="text" id="ceo" name="ceo" required readonly class="editable" placeholder="eg: Elon Gate">
+                    </div>
+                    <div class="form-group">
+                        <label for="company_size">Company Size</label>
+                        <select id="company_size" name="company_size" required disabled class="sel-editable">
+                            <option value="">Select Company Size</option>
+                            <option value="1-10">1-10 Employees</option>
+                            <option value="11-50">11-50 Employees</option>
+                            <option value="51-200">51-200 Employees</option>
+                            <option value="201-500">201-500 Employees</option>
+                            <option value="501+">501-1000 Employees</option>
+                            <option value="1001+">1001+ Employees</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="hq">Headquarters</label>
+                        <input type="text" id="hq" name="hq" required readonly class="editable" placeholder="eg: New York">
+                    </div>
+                    <div class="form-group">
+                        <label for="started_year">Started Year</label>
+                        <input type="number" id="started_year" name="started_year" min="1900" max="2099" required readonly class="editable" placeholder="eg: "1987>
+                    </div>
+                    <div class="form-group">
+                        <label for="official_page_link">Official Page Link</label>
+                        <input type="url" id="official_page_link" name="official_page_link" required readonly class="editable" placeholder="eg: http://www.microsoft.com">
+                    </div>
+                </div>
+                <div class="company-details third">
+                    <div class="form-group">
+                        <label for="industry">Industry</label>
+                        <select name="industry" id="industry" disabled class="sel-editable">
+                            <option value="It">Fintech</option>
+                            <option value="It">Information technology</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="about_company">About Company</label>
+                        <textarea id="about_company" class="text-area editable" name="about_company" rows="4"
+                            required readonly placeholder="eg: Microsoft is a great company ....."></textarea>
+                    </div>
+                </div>
+
+                <div class="btn-div">
+                    <button class="btn">save</button>
+                </div>
+            </form>
+
+        </div>
+        <div class="footer">
+            <a href="dashboard.html"><i class='bx bx-home-alt-2'></i></a>
+            <a href="job-list.html"><i class='bx bx-list-ol'></i></a>
+            <a href="job-post.html"><i class='bx bx-plus-circle'></i></a>
+            <a href="#"><i class='bx bxs-cog'></i></a>
+        </div>
+    </div>
+
+    <script>
+
+        function editSwitch() {
+            let allInputs = document.querySelectorAll(".editable");
+            let allSelect = document.querySelectorAll(".sel-editable");
+            let textArea = document.querySelector(".text-area");
+
+            allInputs.forEach(inp => {
+                inp.readOnly == true ? inp.readOnly = false : inp.readOnly = true; 
+            })
+
+            allSelect.forEach(sel => {
+                sel.disabled == true ? sel.disabled = false : sel.disabled = true;
+            })
+
+            textArea.style.border == "1px solid rgb(178, 178, 178)" ?  textArea.style.border = "1px solid rgb(238, 238, 238)" : textArea.style.border = "1px solid rgb(178, 178, 178)";
+        }
+
+    </script>
+
+
+</body>
+
+</html>

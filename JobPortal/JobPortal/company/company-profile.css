@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body, .main-container {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.footer, .secondary-details, .secondary-details p, .edit-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.first-row-container, .profile-image-container, .cover-bg, .main-img-container, .primary-details, 
+.profile-form, .secondary-details, .edit-div, .company-details, .btn-div, .btn {
+    width: 100%;
+}
+
+a, button {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button, input, select {
+    border: none;
+    outline: none;
+}
+
+.first-row-container {
+    height: 90%;
+    overflow-y: auto;
+    padding: 0 15px;
+}
+
+.profile-image-container {
+    box-shadow: 2px 2px 5px #e4e4e4, -2px -2px 5px #e4e4e4;
+    padding-bottom: 25px;
+    border-radius: 10px;
+}
+
+.cover-bg {
+    height: 150px;
+    background-color: #000;
+    border-radius: 0 0 30px 30px;
+}
+
+.main-img-container, .primary-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #e4e4e4;
+    position: relative;
+    top: -50px;
+}
+
+.image img {
+    width: 98px;
+    height: 98px;
+    border-radius: 50%;
+}
+
+.primary-details {
+    position: relative;
+    top: -30px;
+    gap: 10px;
+}
+
+.primary-details p {
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    padding: 0 25px;
+    font-size: 12px;
+}
+
+.secondary-details {
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.secondary-details p {
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: #eee;
+    border-radius: 5px;
+    gap: 5px;
+}
+
+.profile-form {
+    margin-top: 20px;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.edit-div {
+    justify-content: flex-end;
+    padding: 5px 0;
+}
+
+.edit-div a {
+    font-size: 13px;
+    color: #000;
+    border-bottom: 1px solid #000;
+    padding: 3px 10px;
+}
+
+.edit-div a:active {
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.company-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: #555;
+    width: 300px;
+    animation: fadeIn .5s linear;
+}
+
+.form-group input,
+.form-group select {
+    background-color: #fff;
+    width: 100%;
+    height: 35px;
+    padding: 5px 15px;
+    outline: none;
+    border-radius: 8px;
+}
+
+.text-area {
+    resize: none;
+}
+
+select:disabled {
+    color: #000;
+}
+
+.text-area {
+    width: 100%;
+    height: 100px;
+    outline: none;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgb(238, 238, 238);
+}
+
+input[readonly], select:disabled {
+    border: 1px solid #eee;
+}
+
+input:not([readonly]), select:not(:disabled) {
+    border: 1px solid #aaa;
+}
+
+.btn {
+    height: 40px;
+    border-radius: 8px;
+    background-color: #000;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.search-inputs input::placeholder {
+    color: #aaa;
+    font-size: 12px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        margin-left: -20px;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 9%;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #fff;
+    box-shadow: 5px 5px 10px #000;
+}
+
+.footer a i{
+    color: #000;
+    font-size: 20px;
+
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #b1b1b1;
+}
+
+@media screen and (max-width:750px) {
+    
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+}

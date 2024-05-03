@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Registration</title>
+    <link rel="stylesheet" href="company-signup.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+    <div class="main-container">
+        <div class="header">
+            <a href="index.html"><i class="bx bx-arrow-back"></i> Home</a>
+            <h2>jobQuest</h2>
+            <i></i>
+        </div>
+        <div class="form-container">
+            <h4>Company Registration</h4>
+            <form action="#" method="post" class="form">
+                <p>message</p>
+                <div class="first-row">
+                    <div class="company-details first">
+                        <div class="form-group">
+                            <label for="company_name">Company Name</label>
+                            <input type="text" id="company_name" name="company_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" minlength="8" required>
+                        </div>
+                    </div>
+                    <div class="company-details second">
+                        <div class="form-group logo-up">
+                            <label for="company_logo">Company Logo</label>
+                            <div class="upload-container">
+                                <i class='bx bxs-cloud-upload'></i>
+                                <p class="img-name">image-name.jpg</p>
+                            </div>
+                            <span>upload img, png, jpeg/jpg of <b>350kb</b> or less</span>
+                            <input type="file" id="company_logo" class="company_logo" name="company_logo" accept="image/*" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ceo">CEO</label>
+                            <input type="text" id="ceo" name="ceo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company_size">Company Size</label>
+                            <select id="company_size" name="company_size" required>
+                                <option value="">Select Company Size</option>
+                                <option value="1-10">1-10 Employees</option>
+                                <option value="11-50">11-50 Employees</option>
+                                <option value="51-200">51-200 Employees</option>
+                                <option value="201-500">201-500 Employees</option>
+                                <option value="501+">501-1000 Employees</option>
+                                <option value="1001+">1001+ Employees</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="hq">Headquarters</label>
+                            <input type="text" id="hq" name="hq" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="started_year">Started Year</label>
+                            <input type="number" id="started_year" name="started_year" min="1900" max="2099" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="official_page_link">Official Page Link</label>
+                            <input type="url" id="official_page_link" name="official_page_link" required>
+                        </div>
+                    </div>
+                    <div class="company-details third">
+                        <div class="form-group">
+                            <label for="about_company">About Company</label>
+                            <textarea id="about_company" class="text-area" name="about_company" rows="4"
+                                required></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="second-row">
+                    <button class="reg">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        var fileBtn = document.querySelector(".company_logo");
+        document.querySelector(".bxs-cloud-upload").addEventListener("click", () => {
+            fileBtn.click();
+        });
+
+        fileBtn.addEventListener("change", () => {
+            var fileName = fileBtn.files[0].name;
+            document.querySelector(".img-name").innerText = fileName;
+            console.log(fileName);
+        });
+        
+    </script>
+</body>
+
+</html>
